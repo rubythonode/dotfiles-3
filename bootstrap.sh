@@ -16,7 +16,7 @@ brew cask cleanup
 
 # Install global Git configuration
 [ ! -f $HOME/.gitconfig ] && ln -nfs $HOME/dotfiles/.gitconfig $HOME/.gitconfig
-[ ! -f $HOME/.gitignore_global ] && ln -nfs $HOME/dotfiles/.gitignore_global $HOME/.gitignore_global
+git config --global core.excludesfile $HOME/dotfiles/.gitignore_global
 
 # Make ZSH the default shell environment
 chsh -s $(which zsh)

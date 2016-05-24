@@ -4,7 +4,7 @@
 	user = appkr
 	email = juwonkim@me.com
 	editor = nano
-	excludesfile = /Users/Juwon/.gitignore_global
+	excludesfile = $HOME/dotfiles/.gitignore_global
 [alias]
 	mylog = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=relative
 [color]
@@ -16,12 +16,12 @@
 [user]
 	name = appkr
 	email = juwonkim@me.com
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+# [difftool "sourcetree"]
+# 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+# 	path =
+# [mergetool "sourcetree"]
+# 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+# 	trustExitCode = true
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
