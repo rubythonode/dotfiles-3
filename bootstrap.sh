@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Set temporary variable
-DOTFILES=$DOTFILES
+DOTFILES=$HOME/dotfiles
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
