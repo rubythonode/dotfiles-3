@@ -1,12 +1,29 @@
+##
 # CLI Shortcuts
+##
+
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadcli="source $HOME/.zshrc"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="$(brew --prefix coreutils)/libexec/gnubin/ls -ahlF --color --group-directories-first"
 
+##
 # Recursively remove .DS_Store files
+##
+
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 
+##
 # Laravel
+##
+
 alias art="php artisan"
 alias artisan="php artisan"
+
+##
+# Some more alias to avoid making mistakes:
+##
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
