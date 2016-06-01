@@ -1,4 +1,8 @@
+##
 # Simple calculator
+# Note that * operator needs to be preceded with \
+##
+
 function calc() {
   local result="";
   result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')";
@@ -15,18 +19,27 @@ function calc() {
   printf "\n";
 }
 
+##
 # Create a new directory and enter it
+##
+
 function mkd() {
   mkdir -p "$@" && cd "$_";
 }
 
+##
 # Open man page as PDF
+##
+
 function manpdf() {
   man -t "${1}" | open -f -a /Applications/Preview.app/
 }
 
-# Extra many types of compressed packages
+##
+# Extract many types of compressed packages
 # Credit: http://nparikh.org/notes/zshrc.txt
+##
+
 extract() {
   if [ -f "$1" ]; then
     case "$1" in
@@ -50,7 +63,10 @@ extract() {
   fi
 }
 
+##
 # Determine size of a file or total size of a directory
+##
+
 function fs() {
   if du -b /dev/null > /dev/null 2>&1; then
     local arg=-sbh;
@@ -64,7 +80,10 @@ function fs() {
   fi;
 }
 
+##
 # Create a data URL from a file
+##
+
 function dataurl() {
   local mimeType=$(file -b --mime-type "$1");
   if [[ $mimeType == text/* ]]; then
@@ -73,16 +92,22 @@ function dataurl() {
   echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')";
 }
 
+##
 # Start a PHP local server from a directory, optionally specifying the port
 # (Requires PHP 5.4.0+.)
+##
+
 function phpserver() {
   local port="${1:-8000}";
-  local ip=$(ipconfig getifaddr en1);
+  local ip=$(ipconfig getifaddr en0);
   sleep 1 && open "http://${ip}:${port}/" &
   php -S "${ip}:${port}";
 }
 
+##
 # UTF-8-encode a string of Unicode symbols
+##
+
 function escape() {
   printf "\\\x%s" $(printf "$@" | xxd -p -c1 -u);
   # print a newline unless we’re piping the output to another program
@@ -91,7 +116,10 @@ function escape() {
   fi;
 }
 
+##
 # Decode \x{ABCD}-style Unicode escape sequences
+##
+
 function unidecode() {
   perl -e "binmode(STDOUT, ':utf8'); print \"$@\"";
   # print a newline unless we’re piping the output to another program
@@ -100,7 +128,10 @@ function unidecode() {
   fi;
 }
 
+##
 # Get a character’s Unicode code point
+##
+
 function codepoint() {
   perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))";
   # print a newline unless we’re piping the output to another program
@@ -109,8 +140,11 @@ function codepoint() {
   fi;
 }
 
+##
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
 # opens the given location
+##
+
 function s() {
   if [ $# -eq 0 ]; then
     subl .;
@@ -119,8 +153,11 @@ function s() {
   fi;
 }
 
+##
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
+##
+
 function o() {
   if [ $# -eq 0 ]; then
     open .;
@@ -129,15 +166,21 @@ function o() {
   fi;
 }
 
+##
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
 # `less` with options to preserve color and line numbers, unless the output is
 # small enough for one screen.
+##
+
 function tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
+##
 # Highlight
+##
+
 function hl() {
   if [[ "$1" && "$2" ]]
     then
@@ -150,7 +193,10 @@ function hl() {
     fi
 }
 
+##
 # Homestead
+##
+
 function homestead() {
     cd ~/Homestead
     vagrant $*

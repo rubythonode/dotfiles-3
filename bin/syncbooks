@@ -1,26 +1,42 @@
 #! /usr/bin/env bash
 
+##
 # Check if the destination harddisk is connected
+##
+
 if ! mount | grep /Volumes/wd > /dev/null
   then
   echo "You missed connecting the external HDD, named 'wd'"
   exit 1;
 fi
 
+##
 # Mount //homenas/share/books to ~/books
-if ! mount | grep ~/books > /dev/null
+##
+
+if ! mount | grep $HOME/books > /dev/null
   then
-  mount -t smbfs //homenas/share/books ~/books
+  mount -t smbfs //homenas/share/books $HOME/books
 fi
 
+##
 # Trap interrupts and exit instead of continuing the loop
+##
+
 trap "echo Exited!; exit;" SIGINT SIGTERM
 
 MAX_RETRIES=50
 i=0
 
+##
 # Set the initial return value to failure
+##
+
 false
+
+##
+# Synching
+##
 
 pkill rsync
 
