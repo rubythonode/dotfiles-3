@@ -68,6 +68,7 @@ brew 'tcpdump'
 brew 'tree'
 # brew 'trash'
 brew 'wget'
+brew 'youtube-dl'
 
 ##
 # Development-PHP
