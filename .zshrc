@@ -106,22 +106,6 @@ plugins=(git git-extras httpie npm composer rails)
 source $ZSH/oh-my-zsh.sh
 
 ##
-# Preferred editor for local and remote sessions
-##
-
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-##
-# Compilation flags
-##
-
-# export ARCHFLAGS="-arch x86_64"
-
-##
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
