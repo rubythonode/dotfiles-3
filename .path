@@ -2,37 +2,37 @@
 # Load Node global installed binaries
 ##
 
-export PATH="$HOME/.node/bin:$PATH"
+PATH="$HOME/.node/bin:$PATH"
 
 ##
 # Use project specific binaries before global ones
 ##
 
-export PATH="node_modules/.bin:vendor/bin:$PATH"
+PATH="node_modules/.bin:vendor/bin:$PATH"
 
 ##
 # Make sure PHP 7 is loaded
 ##
 
-export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 
 ##
 # Make sure coreutils are loaded before system commands
 ##
 
-# export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+# PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 ##
 # Local bin directories before anything else
 ##
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 ##
-# Composer, Mactex
+# Composer
 ##
 
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+PATH="$PATH:$HOME/.composer/vendor/bin"
 
 ##
 # Load custom commands
