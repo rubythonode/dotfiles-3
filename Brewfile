@@ -105,14 +105,15 @@ brew 'sqlite'
 # Apps
 ##
 
+cask 'adapter'
 # cask 'atom'
-cask 'balsamiq-mockups'
+# cask 'balsamiq-mockups'
 cask 'calibre'
 cask 'dockertoolbox'
 cask 'evernote'
 cask 'firefox'
 # cask 'github-desktop'
-cask 'gitkraken'
+# cask 'gitkraken'
 # cask 'goofy'
 cask 'google-chrome'
 cask 'google-drive'
