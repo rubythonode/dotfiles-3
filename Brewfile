@@ -92,6 +92,7 @@ brew 'rbenv'
 ##
 
 brew 'python'
+brew 'python3'
 
 ##
 # Development-Database
