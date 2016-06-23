@@ -8,6 +8,7 @@ tap 'caskroom/versions'
 tap 'homebrew/dupes'
 tap 'homebrew/php'
 tap 'homebrew/services'
+tap 'homebrew/versions'
 
 ##
 # Make sure apps get installed in system Applications dir
