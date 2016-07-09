@@ -96,6 +96,12 @@ brew 'python'
 brew 'python3'
 
 ##
+# Development-Go
+##
+
+brew 'golang'
+
+##
 # Development-Database
 ##
 
