@@ -97,7 +97,7 @@ vagrant box add laravel/homestead
 # Install global Node packages
 ##
 
-npm install gitbook-cli gulp-cli gulp yo http-server --global --save
+npm install gitbook-cli gulp-cli gulp yo http-server nodemon --global --save
 
 ##
 # Install Rails & Jekyll
