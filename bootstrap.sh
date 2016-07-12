@@ -83,9 +83,10 @@ source $HOME/.zshrc
 ##
 
 $HOME/.composer/vendor/bin/valet install
+cd $HOME/workspace && $HOME/.composer/vendor/bin/valet park
 
 ##
-# Install Homestead Repo
+# Install Homestead Repo & Add vagrant box
 ##
 
 git clone git@github.com:laravel/homestead.git $HOME/Homestead
