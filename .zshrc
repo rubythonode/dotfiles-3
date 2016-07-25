@@ -17,7 +17,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ##
 
-ZSH_THEME="af-magic"
+ZSH_THEME="cobalt2"
 
 ##
 # Uncomment the following line to use case-sensitive completion.

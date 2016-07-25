@@ -59,6 +59,9 @@ chsh -s $(which zsh)
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+# Install cobalt2 theme
+wget https://raw.githubusercontent.com/wesbos/Cobalt2-iterm/master/cobalt2.zsh-theme -O $HOME/.oh-my-zsh/themes/cobalt2.zsh-theme
+
 ##
 # Install & execute profile
 ##
