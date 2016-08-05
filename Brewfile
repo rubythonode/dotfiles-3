@@ -80,6 +80,7 @@ brew 'php70-intl'
 brew 'php70-xdebug'
 brew 'composer'
 brew 'phpunit'
+brew 'php-cs-fixer'
 
 ##
 # Development-Ruby
