@@ -25,11 +25,12 @@ alias service="brew services"
 
 alias art="php artisan"
 alias artisan="php artisan"
+alias tinker="php artisan tinker"
 
 ##
 # Some more alias to avoid making mistakes:
 ##
 
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
