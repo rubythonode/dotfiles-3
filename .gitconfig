@@ -6,7 +6,7 @@
 	user = appkr
 	email = juwonkim@me.com
 	editor = nano
-	excludesfile = $HOME/dotfiles/.gitignore_global
+	excludesfile = /Users/appkr/dotfiles/.gitignore_global
 
 [alias]
 	mylog = log --graph --decorate --pretty=oneline --abbrev-commit --all --date=relative
