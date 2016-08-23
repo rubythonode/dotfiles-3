@@ -36,7 +36,7 @@ brew update
 ##
 
 brew tap homebrew/bundle
-brew bundle --file=$DOTFILES/Brewfile
+brew bundle --file=$DOTFILES/Brewfile # Install binary & applications
 brew cleanup
 brew cask cleanup
 
@@ -74,6 +74,13 @@ source $HOME/.zshrc
 ##
 
 [ ! -f $HOME/.mackup.cfg ] && ln -nfs $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
+
+##
+# Install Composer
+##
+
+curl -sS https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
 
 ##
 # Install global Composer packages
