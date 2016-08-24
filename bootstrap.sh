@@ -41,6 +41,12 @@ brew cleanup
 brew cask cleanup
 
 ##
+# Launch sublime in command line
+##
+
+ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+
+##
 # Install global Git configuration
 ##
 
