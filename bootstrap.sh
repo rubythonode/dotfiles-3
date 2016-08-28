@@ -50,8 +50,10 @@ brew cask cleanup
 # Install global Git configuration
 ##
 
-[ ! -f $HOME/.gitconfig ] && ln -nfs $DOTFILES/.gitconfig $HOME/.gitconfig
+ln -nfs $DOTFILES/.gitconfig $HOME/.gitconfig
 git config --global core.excludesfile $DOTFILES/.gitignore_global
+git config --global user.name "appkr"
+git config --global user.name "juwonkim@me.com"
 
 ##
 # Make ZSH the default shell environment
