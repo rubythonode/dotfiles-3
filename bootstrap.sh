@@ -114,7 +114,7 @@ git clone git@github.com:laravel/homestead.git $HOME/Homestead
 # Install global Node packages
 ##
 
-npm install gitbook-cli gulp-cli gulp yo http-server nodemon --global --save
+npm install gitbook-cli gulp-cli gulp yo http-server nodemon bower --global --save
 
 ##
 # Install Rails & Jekyll
