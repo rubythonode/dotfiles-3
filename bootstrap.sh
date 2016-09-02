@@ -53,7 +53,7 @@ brew cask cleanup
 ln -nfs $DOTFILES/.gitconfig $HOME/.gitconfig
 git config --global core.excludesfile $DOTFILES/.gitignore_global
 git config --global user.name "appkr"
-git config --global user.name "juwonkim@me.com"
+git config --global user.email "juwonkim@me.com"
 
 ##
 # Make ZSH the default shell environment
@@ -108,6 +108,7 @@ cd $HOME/workspace && $HOME/.composer/vendor/bin/valet park
 ##
 
 git clone git@github.com:laravel/homestead.git $HOME/Homestead
+bash $HOME/Homestead/init.sh
 [[ $(basename $(pwd)) == "Homestead" ]] && cd $HOME/Homestead && vagrant box add laravel/homestead
 
 ##
