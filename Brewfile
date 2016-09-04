@@ -56,7 +56,7 @@ brew 'homebrew/dupes/grep'
 brew 'ffmpeg'
 brew 'git'
 brew 'git-flow'
-brew 'git-stree'
+# brew 'git-stree' # deprecated
 brew 'highlight'
 brew 'httpie'
 # brew 'hub'
