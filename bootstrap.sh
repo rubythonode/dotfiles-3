@@ -1,8 +1,8 @@
 #!/bin/sh
 
 ##
-# Thanks to Maxime Fabre! https://speakerdeck.com/anahkiasen/a-storm-homebrewin
-# Thanks to Mathias Bynens! https://mths.be/osx
+# Thanks Maxime Fabre! https://speakerdeck.com/anahkiasen/a-storm-homebrewin
+# Thanks Mathias Bynens! https://mths.be/osx
 ##
 
 ##
@@ -70,18 +70,31 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 # Install cobalt2 theme
 # wget https://raw.githubusercontent.com/wesbos/Cobalt2-iterm/master/cobalt2.zsh-theme -O $HOME/.oh-my-zsh/themes/cobalt2.zsh-theme
 
+# Install Powerline theme
+wget https://raw.githubusercontent.com/jeremyFreeAgent/oh-my-zsh-powerline-theme/master/powerline.zsh-theme -O $HOME/.oh-my-zsh/themes/powerline.zsh-theme
+git clone git@github.com:powerline/fonts.git && bash fonts/install.sh
+rm -rf fonts
+
 ##
 # Install & execute profile
 ##
 
-[ ! -f $HOME/.zshrc ] && ln -nfs $DOTFILES/.zshrc $HOME/.zshrc
+# Always prefer dotfiles' .zshrc
+# [ ! -f $HOME/.zshrc ] && ln -nfs $DOTFILES/.zshrc $HOME/.zshrc
+ln -nfs $DOTFILES/.zshrc $HOME/.zshrc
 source $HOME/.zshrc
 
 ##
-# Install Mackup cofnig
+# Install Mackup config
 ##
 
 [ ! -f $HOME/.mackup.cfg ] && ln -nfs $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
+
+##
+# Install .nanorc
+##
+
+ln -nfs $DOTFILES/.nanorc $HOME/.nanorc
 
 ##
 # Install Composer
