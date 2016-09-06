@@ -82,7 +82,6 @@ rm -rf fonts
 # Always prefer dotfiles' .zshrc
 # [ ! -f $HOME/.zshrc ] && ln -nfs $DOTFILES/.zshrc $HOME/.zshrc
 ln -nfs $DOTFILES/.zshrc $HOME/.zshrc
-source $HOME/.zshrc
 
 ##
 # Install Mackup config
@@ -136,6 +135,12 @@ npm install gitbook-cli gulp-cli gulp yo http-server nodemon bower --global --sa
 
 gem install rails
 gem install jekyll
+
+##
+# Source profile
+##
+
+source $HOME/.zshrc
 
 ##
 # Set OS X preferences
