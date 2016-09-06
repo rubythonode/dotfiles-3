@@ -122,7 +122,7 @@ cd $HOME/workspace && $HOME/.composer/vendor/bin/valet park
 
 git clone git@github.com:laravel/homestead.git $HOME/Homestead
 bash $HOME/Homestead/init.sh
-[[ $(basename $(pwd)) == "Homestead" ]] && cd $HOME/Homestead && vagrant box add laravel/homestead
+[[ $(basename $(pwd)) != "Homestead" ]] && cd $HOME/Homestead && vagrant box add laravel/homestead
 
 ##
 # Install global Node packages
