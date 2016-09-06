@@ -73,6 +73,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 # Install Powerline theme
 wget https://raw.githubusercontent.com/jeremyFreeAgent/oh-my-zsh-powerline-theme/master/powerline.zsh-theme -O $HOME/.oh-my-zsh/themes/powerline.zsh-theme
 git clone git@github.com:powerline/fonts.git && bash fonts/install.sh
+sleep 3
 rm -rf fonts
 
 ##
