@@ -116,7 +116,7 @@ source $ZSH/oh-my-zsh.sh
 # done;
 # unset file;
 
-files=("$DOTFILES/.path" "$DOTFILES/.export" "$DOTFILES/.aliases" "$DOTFILES/.functions" "$DOTFILES/.extra");
+files=("$DOTFILES/.path" "$DOTFILES/.export" "$DOTFILES/.aliases" "$DOTFILES/.functions" "$DOTFILES/.extra" "$DOTFILES/.powerline");
 for file in "${files[@]}"; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
