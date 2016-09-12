@@ -26,6 +26,7 @@ alias service="brew services"
 alias art="php artisan"
 alias artisan="php artisan"
 alias tinker="php artisan tinker"
+alias serve="php artisan serve"
 
 ##
 # Some more alias to avoid making mistakes:
