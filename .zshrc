@@ -17,6 +17,10 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ##
 
+POWERLINE_RIGHT_B="none"
+POWERLINE_HIDE_USER_NAME="true"
+POWERLINE_HIDE_HOST_NAME="true"
+POWERLINE_DISABLE_RPROMPT="true"
 ZSH_THEME="powerline"
 
 ##
