@@ -7,6 +7,11 @@ export DOTFILES=$HOME/dotfiles
 ##
 # Path to your oh-my-zsh installation.
 ##
+export POWERLINE_RIGHT_B="none"
+export POWERLINE_HIDE_USER_NAME="true"
+export POWERLINE_HIDE_HOST_NAME="true"
+export POWERLINE_DISABLE_RPROMPT="true"
+export ZSH_THEME="powerline"
 
 export ZSH=$HOME/.oh-my-zsh
 
@@ -16,12 +21,6 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ##
-
-POWERLINE_RIGHT_B="none"
-POWERLINE_HIDE_USER_NAME="true"
-POWERLINE_HIDE_HOST_NAME="true"
-POWERLINE_DISABLE_RPROMPT="true"
-ZSH_THEME="powerline"
 
 ##
 # Uncomment the following line to use case-sensitive completion.
