@@ -73,6 +73,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 # Install Powerline theme
 wget https://raw.githubusercontent.com/jeremyFreeAgent/oh-my-zsh-powerline-theme/master/powerline.zsh-theme -O $HOME/.oh-my-zsh/themes/powerline.zsh-theme
 git clone git@github.com:powerline/fonts.git && bash fonts/install.sh
+sleep 3
 rm -rf fonts
 
 ##
@@ -82,7 +83,6 @@ rm -rf fonts
 # Always prefer dotfiles' .zshrc
 # [ ! -f $HOME/.zshrc ] && ln -nfs $DOTFILES/.zshrc $HOME/.zshrc
 ln -nfs $DOTFILES/.zshrc $HOME/.zshrc
-source $HOME/.zshrc
 
 ##
 # Install Mackup config
@@ -122,7 +122,7 @@ cd $HOME/workspace && $HOME/.composer/vendor/bin/valet park
 
 git clone git@github.com:laravel/homestead.git $HOME/Homestead
 bash $HOME/Homestead/init.sh
-[[ $(basename $(pwd)) == "Homestead" ]] && cd $HOME/Homestead && vagrant box add laravel/homestead
+[[ $(basename $(pwd)) != "Homestead" ]] && cd $HOME/Homestead && vagrant box add laravel/homestead
 
 ##
 # Install global Node packages
@@ -136,6 +136,12 @@ npm install gitbook-cli gulp-cli gulp yo http-server nodemon bower --global --sa
 
 gem install rails
 gem install jekyll
+
+##
+# Source profile
+##
+
+source $HOME/.zshrc
 
 ##
 # Set OS X preferences
