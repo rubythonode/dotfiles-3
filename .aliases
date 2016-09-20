@@ -35,3 +35,10 @@ alias serve="php artisan serve"
 # alias rm='rm -i'
 # alias cp='cp -i'
 # alias mv='mv -i'
+
+##
+# Docker
+##
+
+# Usage: thrift-docker source_dir
+thrift-docker='docker run -it -v $1:/thrift dd69b3ffb481'
