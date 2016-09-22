@@ -58,6 +58,7 @@ brew 'git'
 brew 'git-flow'
 # brew 'git-stree' # deprecated
 brew 'highlight'
+brew 'htop'
 brew 'httpie'
 # brew 'hub'
 # brew 'latex2html'
