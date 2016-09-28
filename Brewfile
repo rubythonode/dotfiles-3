@@ -82,6 +82,7 @@ brew 'youtube-dl'
 brew 'php70', args: ['without-apache']
 brew 'php70-intl'
 brew 'php70-xdebug'
+brew 'phpdocumentor'
 brew 'composer'
 brew 'phpunit'
 brew 'php-cs-fixer'
