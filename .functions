@@ -3,7 +3,7 @@
 # Note that * operator needs to be preceded with \
 ##
 
-function calc() {
+function cal() {
   local result="";
   result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')";
 
