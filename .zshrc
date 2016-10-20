@@ -127,3 +127,9 @@ for file in "${files[@]}"; do
 done;
 
 unset files file;
+
+##
+# Merge hub function to git
+##
+
+eval "$(hub alias -s)"
