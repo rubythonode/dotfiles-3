@@ -101,7 +101,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 ##
 
-plugins=(git git-extras httpie npm composer rails)
+plugins=(git git-extras hub httpie npm composer rails)
 
 ##
 # Activate Oh-My-Zsh
