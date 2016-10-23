@@ -138,6 +138,12 @@ gem install rails
 gem install jekyll
 
 ##
+# Install AWS Shell
+##
+
+pip install aws-shell
+
+##
 # Source profile
 ##
 
