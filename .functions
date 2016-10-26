@@ -201,3 +201,11 @@ function homestead() {
     cd ~/Homestead
     vagrant $*
 }
+
+##
+# Docker
+##
+
+function dockip() {
+  docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
+}
