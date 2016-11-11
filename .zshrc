@@ -133,3 +133,5 @@ unset files file;
 ##
 
 eval "$(hub alias -s)"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
