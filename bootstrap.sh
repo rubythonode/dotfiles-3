@@ -121,8 +121,8 @@ cd $HOME/workspace && $HOME/.composer/vendor/bin/valet park
 ##
 
 git clone git@github.com:laravel/homestead.git $HOME/Homestead
-bash $HOME/Homestead/init.sh
-[[ $(basename $(pwd)) != "Homestead" ]] && cd $HOME/Homestead && vagrant box add laravel/homestead
+cd $HOME/Homestead && bash ./init.sh
+[[ $(basename $(pwd)) != "Homestead" ]] && cd $HOME/Homestead; vagrant box add laravel/homestead
 
 ##
 # Install global Node packages
@@ -134,8 +134,7 @@ npm install gitbook-cli gulp-cli gulp yo http-server nodemon bower --global --sa
 # Install Rails & Jekyll
 ##
 
-gem install rails
-gem install jekyll
+gem install rails jekyll
 
 ##
 # Install AWS Shell
