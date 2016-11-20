@@ -41,7 +41,7 @@ alias serve="php artisan serve"
 ##
 
 alias dc="docker-compose"
-alias drm="docker ps ${docker ps -a -q}"
+alias drm="docker ps $(docker ps -a -q)"
 alias drmi='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 
 # Usage: thrift-docker source_dir
