@@ -40,5 +40,9 @@ alias serve="php artisan serve"
 # Docker
 ##
 
+alias dc="docker-compose"
+alias drm="docker rm $(docker ps -a -q)"
+alias drmi='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+
 # Usage: thrift-docker source_dir
-alias thrift-docker='docker run -it -v $1:/thrift dd69b3ffb481'
+# alias thrift-docker='docker run -it -v `pwd`:/thrift dd69b3ffb481'
