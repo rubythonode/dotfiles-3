@@ -39,3 +39,4 @@ PATH="$PATH:$HOME/.composer/vendor/bin"
 #-------------------------------------------------------------------------------
 
 export PATH="$DOTFILES/bin:$PATH"
+
