@@ -258,3 +258,13 @@ function myip() {
   curl -s "http://checkip.dyndns.org/" | grep -o "[0-9]*\.[0-9]*\.[0-9]*\.[0-9]" | head -1
 }
 
+#-------------------------------------------------------------------------------
+# Release Versions
+#-------------------------------------------------------------------------------
+
+function version() {
+  BRANCH=`git rev-parse --abbrev-ref HEAD`
+  HASH=`git show --pretty='format:%h' | head -1`
+  echo $BRANCH~$HASH
+}
+
