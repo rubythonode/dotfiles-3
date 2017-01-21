@@ -21,6 +21,9 @@ export POWERLINE_RIGHT_B="none"
 export POWERLINE_HIDE_USER_NAME="true"
 export POWERLINE_HIDE_HOST_NAME="true"
 export POWERLINE_DISABLE_RPROMPT="true"
+POWERLINE_PATH="short"
+POWERLINE_DETECT_SSH="true"
+
 export ZSH_THEME="powerline"
 
 #-------------------------------------------------------------------------------
@@ -70,7 +73,7 @@ export UPDATE_ZSH_DAYS=7
 # Uncomment the following line to display red dots whilst waiting for completion.
 #-------------------------------------------------------------------------------
 
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 #-------------------------------------------------------------------------------
 # Uncomment the following line if you want to disable marking untracked files
@@ -115,12 +118,7 @@ source $ZSH/oh-my-zsh.sh
 # * ~/.extra can be used for other settings you don’t want to commit.
 #-------------------------------------------------------------------------------
 
-# for file in ~/.{path,export,aliases,functions,extra}; do
-#   [ -r "$file" ] && [ -f "$file" ] && source "$file";
-# done;
-# unset file;
-
-files=("$DOTFILES/.path" "$DOTFILES/.export" "$DOTFILES/.aliases" "$DOTFILES/.functions" "$DOTFILES/.extra" "$DOTFILES/.powerline");
+files=("$DOTFILES/.path" "$DOTFILES/.export" "$DOTFILES/.aliases" "$DOTFILES/.functions" "$DOTFILES/.extra");
 
 for file in "${files[@]}"; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -134,4 +132,3 @@ unset files file;
 
 eval "$(hub alias -s)"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
