@@ -51,7 +51,9 @@ brew 'homebrew/dupes/grep'
 # Install Binaries
 #-------------------------------------------------------------------------------
 
+brew 'asciinema'
 # brew 'awscli'
+brew 'aws-elasticbeanstalk'
 # brew 'autoconf'
 brew 'ffmpeg'
 brew 'git'
