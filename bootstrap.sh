@@ -112,6 +112,9 @@ sudo mv composer.phar /usr/local/bin/composer
 
 #-------------------------------------------------------------------------------
 # Install Laravel Valet
+# IMPORTANT NOTE
+# For valet to work correctly, php71 & nginx must be run as sudo privileges.
+# # brew services start php71 && brew services nginx
 #-------------------------------------------------------------------------------
 
 $HOME/.composer/vendor/bin/valet install
