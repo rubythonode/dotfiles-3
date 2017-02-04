@@ -42,6 +42,7 @@ brew cask cleanup
 
 #-------------------------------------------------------------------------------
 # Launch sublime in command line
+# Now this command is built-in
 #-------------------------------------------------------------------------------
 
 # ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
@@ -52,8 +53,8 @@ brew cask cleanup
 
 ln -nfs $DOTFILES/.gitconfig $HOME/.gitconfig
 git config --global core.excludesfile $DOTFILES/.gitignore_global
-git config --global user.name "appkr"
-git config --global user.email "juwonkim@me.com"
+git config --global user.name "foo"
+git config --global user.email "foo@bar.com"
 
 #-------------------------------------------------------------------------------
 # Make ZSH the default shell environment
@@ -118,17 +119,19 @@ cd $HOME/workspace && $HOME/.composer/vendor/bin/valet park
 
 #-------------------------------------------------------------------------------
 # Install Homestead Repo & Add vagrant box
+# Commented out on behalf of Docker
 #-------------------------------------------------------------------------------
 
-git clone git@github.com:laravel/homestead.git $HOME/Homestead
-cd $HOME/Homestead && bash ./init.sh
-[[ $(basename $(pwd)) != "Homestead" ]] && cd $HOME/Homestead; vagrant box add laravel/homestead
+# git clone git@github.com:laravel/homestead.git $HOME/Homestead
+# cd $HOME/Homestead && bash ./init.sh
+# [[ $(basename $(pwd)) != "Homestead" ]] && cd $HOME/Homestead; vagrant box add laravel/homestead
 
 #-------------------------------------------------------------------------------
 # Install global Node packages
 #-------------------------------------------------------------------------------
 
-npm install gitbook-cli gulp-cli gulp yo http-server nodemon bower --global --save
+npm install gulp-cli gulp yo http-server nodemon --global --save
+# npm install gitbook-cli --global --save
 
 #-------------------------------------------------------------------------------
 # Install Rails & Jekyll
@@ -138,9 +141,10 @@ gem install rails jekyll
 
 #-------------------------------------------------------------------------------
 # Install AWS Shell
+# Commented out because I prefer brew version of aws-cli
 #-------------------------------------------------------------------------------
 
-pip install aws-shell
+# pip install aws-shell
 
 #-------------------------------------------------------------------------------
 # Source profile

@@ -2,7 +2,7 @@
 # Load Node global installed binaries
 #-------------------------------------------------------------------------------
 
-PATH="$HOME/.node/bin:$PATH"
+PATH="/usr/local/opt/node@6/bin:$PATH"
 
 #-------------------------------------------------------------------------------
 # Use project specific binaries before global ones
